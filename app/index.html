@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dashboard</title>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<script defer src="js/scripts.min.js"></script>
+</head>
+
+<body>
+	<aside class="sidebar">
+		<div class="sidebar__inner">
+			<div class="sidebar__header">
+				<img class="sidebar__header-logo" src="images/logo.svg" alt="logo">
+				<h3 class="sidebar__header-title">Dashboard</h3>
+			</div>
+			<nav class="sidebar__nav-main nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#overview"></use>
+						</svg>
+						<a class="nav__link" href="#">
+							Overview
+						</a>
+					</li>
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#tickets"></use>
+						</svg>
+						<a class="nav__link" href="#">
+							Tickets
+						</a>
+					</li>
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#contacts"></use>
+						</svg>
+						<a class="nav__link" href="#">
+							Contacts
+						</a>
+					</li>
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#tasks"></use>
+						</svg>
+						<a class="nav__link" href="#">
+							Tasks
+						</a>
+					</li>
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#articles"></use>
+						</svg>
+						<a class="nav__link" href="#">
+							Articles
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="sidebar__nav-footer nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<svg class="nav__icon" width="16" height="16">
+							<use xlink:href="images/icons.svg#settings"></use>
+						</svg>
+						
+						<a class="nav__link" href="#">
+							Settings
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<main class="content">
+		<div class="content__header">
+			<h3 class="content__header-title">Overview</h3>
+			<div class="content__header-user user">
+				<div class="user__icons">
+					<img class="user__icon" src="images/" alt="search">
+					<img class="user__icon" src="images/" alt="bell">
+				</div>
+				<div class="user__info">
+					<h4 class="user__name">Jones Ferdinand</h4>
+					<img class="user__avatar" src="images/" alt="avatar">
+				</div>
+			</div>
+		</div>
+		<div class="content__cards">
+			<div class="content__cards-inner">
+				<div class="content__cards-item cards-item">
+					<h4 class="cards-item__title">Unresolved</h4>
+					<h3 class="cards-item__value">60</h3>
+				</div>
+				<div class="content__cards-item cards-item">
+					<h4 class="cards-item__title">Overdue</h4>
+					<h3 class="cards-item__value">16</h3>
+				</div>
+				<div class="content__cards-item cards-item">
+					<h4 class="cards-item__title">Open</h4>
+					<h3 class="cards-item__value">43</h3>
+				</div>
+				<div class="content__cards-item cards-item">
+					<h4 class="cards-item__title">On hold</h4>
+					<h3 class="cards-item__value">64</h3>
+				</div>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+</html>
