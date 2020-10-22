@@ -1,0 +1,49 @@
+.user {
+  &__inner {
+    display: flex;  
+    align-items: center;
+  }
+  &__icons {
+    display: flex;
+    height: 32px;
+    border-right: 1px solid #DFE0EB;
+  }
+  &__icon {
+    padding-right: 24px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #3751FF;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1.5px solid #F7F8FC;
+    }
+    &:last-child {
+      padding-right: 32px;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: right;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    margin-left: 32px;
+  }
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #DFE0EB;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-left: 14px;
+  }
+}

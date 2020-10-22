@@ -9,10 +9,12 @@
 	<title>Dashboard</title>
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.min.css">
+	<script src="https://kit.fontawesome.com/666cf124eb.js" crossorigin="anonymous"></script>
 	<script defer src="js/scripts.min.js"></script>
 </head>
 
 <body>
+
 	<aside class="sidebar">
 		<div class="sidebar__inner">
 			<div class="sidebar__header">
@@ -22,41 +24,31 @@
 			<nav class="sidebar__nav-main nav">
 				<ul class="nav__list">
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#overview"></use>
-						</svg>
+						<i class="nav__icon fas fa-chart-pie"></i>
 						<a class="nav__link" href="#">
 							Overview
 						</a>
 					</li>
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#tickets"></use>
-						</svg>
+						<i class="nav__icon fas fa-ticket-alt"></i>
 						<a class="nav__link" href="#">
 							Tickets
 						</a>
 					</li>
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#contacts"></use>
-						</svg>
+						<i class="nav__icon fas fa-users"></i>
 						<a class="nav__link" href="#">
 							Contacts
 						</a>
 					</li>
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#tasks"></use>
-						</svg>
+						<i class="nav__icon fas fa-user-tie"></i>
 						<a class="nav__link" href="#">
 							Tasks
 						</a>
 					</li>
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#articles"></use>
-						</svg>
+						<i class="nav__icon fas fa-book"></i>
 						<a class="nav__link" href="#">
 							Articles
 						</a>
@@ -66,10 +58,7 @@
 			<nav class="sidebar__nav-footer nav">
 				<ul class="nav__list">
 					<li class="nav__item">
-						<svg class="nav__icon" width="16" height="16">
-							<use xlink:href="images/icons.svg#settings"></use>
-						</svg>
-						
+						<i class="nav__icon fas fa-cog"></i>
 						<a class="nav__link" href="#">
 							Settings
 						</a>
@@ -80,41 +69,45 @@
 	</aside>
 
 	<main class="content">
-		<div class="content__header">
-			<h3 class="content__header-title">Overview</h3>
-			<div class="content__header-user user">
-				<div class="user__icons">
-					<img class="user__icon" src="images/" alt="search">
-					<img class="user__icon" src="images/" alt="bell">
+		<div class="content__inner">
+			<div class="content__header">
+				<h3 class="content__header-title">Overview</h3>
+				<div class="content__header-user user">
+					<div class="user__inner">
+						<div class="user__icons">
+							<img class="user__icon" src="images/search.svg" alt="search">
+							<img class="user__icon" src="images/bell.svg" alt="bell">
+						</div>
+						<div class="user__info">
+							<h4 class="user__name">Jones Ferdinand</h4>
+							<img class="user__avatar" src="images/avatar.png" alt="avatar">
+						</div>
+					</div>
 				</div>
-				<div class="user__info">
-					<h4 class="user__name">Jones Ferdinand</h4>
-					<img class="user__avatar" src="images/" alt="avatar">
+			</div>
+			<div class="content__cards">
+				<div class="content__cards-inner">
+					<div class="content__cards-item cards-item">
+						<h4 class="cards-item__title">Unresolved</h4>
+						<h3 class="cards-item__value">60</h3>
+					</div>
+					<div class="content__cards-item cards-item">
+						<h4 class="cards-item__title">Overdue</h4>
+						<h3 class="cards-item__value">16</h3>
+					</div>
+					<div class="content__cards-item cards-item">
+						<h4 class="cards-item__title">Open</h4>
+						<h3 class="cards-item__value">43</h3>
+					</div>
+					<div class="content__cards-item cards-item">
+						<h4 class="cards-item__title">On hold</h4>
+						<h3 class="cards-item__value">64</h3>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="content__cards">
-			<div class="content__cards-inner">
-				<div class="content__cards-item cards-item">
-					<h4 class="cards-item__title">Unresolved</h4>
-					<h3 class="cards-item__value">60</h3>
-				</div>
-				<div class="content__cards-item cards-item">
-					<h4 class="cards-item__title">Overdue</h4>
-					<h3 class="cards-item__value">16</h3>
-				</div>
-				<div class="content__cards-item cards-item">
-					<h4 class="cards-item__title">Open</h4>
-					<h3 class="cards-item__value">43</h3>
-				</div>
-				<div class="content__cards-item cards-item">
-					<h4 class="cards-item__title">On hold</h4>
-					<h3 class="cards-item__value">64</h3>
-				</div>
-			</div>
-		</div>
-
 	</main>
+
 </body>
 
 </html>

@@ -4,7 +4,8 @@ $gray: #363740;
 .sidebar {
   &__inner {
     background-color: $gray;
-    width: 255px;
+    min-width: 255px;
+    flex-grow: 1;
     height: 100vh;
     position: fixed;
     display: flex;

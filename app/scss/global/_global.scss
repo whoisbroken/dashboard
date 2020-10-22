@@ -13,10 +13,10 @@ body {
   font-size: 16px;
   line-height: 32px;
   letter-spacing: 0.2px;
+  background: #F7F8FC;
 }
 
 .container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 15px;
+  display: flex;
+  justify-content: flex-start;
 }
