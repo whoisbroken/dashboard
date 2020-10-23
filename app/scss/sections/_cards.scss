@@ -4,12 +4,13 @@
   border-radius: 8px;
   padding: 24px 32px;
   min-width: 258px;
+  transition: .3s all ease;
   &:hover{
     border: 1px solid #3751FF;
     cursor: pointer;
   }
   &:hover &__title,
-  &:hover &__value {
+  &:hover &__count {
     color: #3751FF;
   }
   &__title {
@@ -23,7 +24,7 @@
     color: #9FA2B4;
     margin-bottom: 12px;
   }
-  &__value {
+  &__count {
     font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: bold;

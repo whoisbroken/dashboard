@@ -14,60 +14,62 @@
 </head>
 
 <body>
+	<div class="container">
 
-	<aside class="sidebar">
-		<div class="sidebar__inner">
-			<div class="sidebar__header">
-				<img class="sidebar__header-logo" src="images/logo.svg" alt="logo">
-				<h3 class="sidebar__header-title">Dashboard</h3>
+
+		<aside class="sidebar">
+			<div class="sidebar__inner">
+				<div class="sidebar__header">
+					<img class="sidebar__header-logo" src="images/logo.svg" alt="logo">
+					<h3 class="sidebar__header-title">Dashboard</h3>
+				</div>
+				<nav class="sidebar__nav-main nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<i class="nav__icon fas fa-chart-pie"></i>
+							<a class="nav__link" href="#">
+								Overview
+							</a>
+						</li>
+						<li class="nav__item">
+							<i class="nav__icon fas fa-ticket-alt"></i>
+							<a class="nav__link" href="#">
+								Tickets
+							</a>
+						</li>
+						<li class="nav__item">
+							<i class="nav__icon fas fa-users"></i>
+							<a class="nav__link" href="#">
+								Contacts
+							</a>
+						</li>
+						<li class="nav__item">
+							<i class="nav__icon fas fa-user-tie"></i>
+							<a class="nav__link" href="#">
+								Tasks
+							</a>
+						</li>
+						<li class="nav__item">
+							<i class="nav__icon fas fa-book"></i>
+							<a class="nav__link" href="#">
+								Articles
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="sidebar__nav-footer nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<i class="nav__icon fas fa-cog"></i>
+							<a class="nav__link" href="#">
+								Settings
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<nav class="sidebar__nav-main nav">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<i class="nav__icon fas fa-chart-pie"></i>
-						<a class="nav__link" href="#">
-							Overview
-						</a>
-					</li>
-					<li class="nav__item">
-						<i class="nav__icon fas fa-ticket-alt"></i>
-						<a class="nav__link" href="#">
-							Tickets
-						</a>
-					</li>
-					<li class="nav__item">
-						<i class="nav__icon fas fa-users"></i>
-						<a class="nav__link" href="#">
-							Contacts
-						</a>
-					</li>
-					<li class="nav__item">
-						<i class="nav__icon fas fa-user-tie"></i>
-						<a class="nav__link" href="#">
-							Tasks
-						</a>
-					</li>
-					<li class="nav__item">
-						<i class="nav__icon fas fa-book"></i>
-						<a class="nav__link" href="#">
-							Articles
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="sidebar__nav-footer nav">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<i class="nav__icon fas fa-cog"></i>
-						<a class="nav__link" href="#">
-							Settings
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-
+		</aside>
+	</div>
 	<main class="content">
 		<div class="content__inner">
 			<div class="content__header">
@@ -85,26 +87,101 @@
 					</div>
 				</div>
 			</div>
-			<div class="content__cards">
+			<section class="content__cards">
 				<div class="content__cards-inner">
 					<div class="content__cards-item cards-item">
 						<h4 class="cards-item__title">Unresolved</h4>
-						<h3 class="cards-item__value">60</h3>
+						<h3 class="cards-item__count">60</h3>
 					</div>
 					<div class="content__cards-item cards-item">
 						<h4 class="cards-item__title">Overdue</h4>
-						<h3 class="cards-item__value">16</h3>
+						<h3 class="cards-item__count">16</h3>
 					</div>
 					<div class="content__cards-item cards-item">
 						<h4 class="cards-item__title">Open</h4>
-						<h3 class="cards-item__value">43</h3>
+						<h3 class="cards-item__count">43</h3>
 					</div>
 					<div class="content__cards-item cards-item">
 						<h4 class="cards-item__title">On hold</h4>
-						<h3 class="cards-item__value">64</h3>
+						<h3 class="cards-item__count">64</h3>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section class="tickets-and-tasks">
+				<div class="tickets-and-tasks__inner">
+					<section class="tickets-and-tasks__item unresolved-tickets">
+						<div class="unresolved-tickets__inner">
+							<div class="unresolved-tickets__header">
+								<div class="unresolved-tickets__header-box">
+									<h2 class="unresolved-tickets__title">Unresolved tickets</h2>
+									<h4 class="unresolved-tickets__subtitle">Group: <span>Support</span></h4>
+								</div>
+								<a class="unresolved-tickets__view" href="#">View details</a>
+							</div>
+							<ul class="unresolved-tickets__list">
+								<ul class="unresolved-tickets__item">
+									<p class="unresolved-tickets__text">Waiting on Feature Request</p>
+									<p class="unresolved-tickets__value">4238</p>
+								</ul>
+								<ul class="unresolved-tickets__item">
+									<p class="unresolved-tickets__text">Awaiting Customer Response</p>
+									<p class="unresolved-tickets__value">1005</p>
+								</ul>
+								<ul class="unresolved-tickets__item">
+									<p class="unresolved-tickets__text">Awaiting Developer Fix</p>
+									<p class="unresolved-tickets__value">914</p>
+								</ul>
+								<ul class="unresolved-tickets__item">
+									<p class="unresolved-tickets__text">Pending</p>
+									<p class="unresolved-tickets__value">281</p>
+								</ul>
+							</ul>
+						</div>
+					</section>
+					<secion class="tickets-and-tasks__item tasks">
+						<div class="tasks__inner">
+							<div class="tasks__header">
+								<div class="tasks__header-box">
+									<h2 class="tasks__title">Tasks</h2>
+									<h4 class="tasks__subtitle">Today</h4>
+								</div>
+								<a class="tasks__view" href="#">View all</a>
+							</div>
+							<div class="tasks__create-task create-task">
+								<input class="create-task__input" type="text" placeholder="Create new task">
+								<button class="create-task__button">
+									<img class="create-task__icon" src="images/plus.svg" alt="plus">
+								</button>
+							</div>
+							<ul class="tasks__list">
+								<ul class="tasks__item">
+									<label class="tasks__label">
+										<input class="tasks__checkbox" type="checkbox">
+										<span>Finish ticket update</span>
+									</label>
+									<span class="tasks__tag">urgent</span>
+								</ul>
+								<ul class="tasks__item">
+									<label class="tasks__label">
+										<input class="tasks__checkbox" type="checkbox">
+										<span>Create new ticket example</span>
+									</label>
+									<span class="tasks__tag">new</span>
+								</ul>
+								<ul class="tasks__item">
+									<label class="tasks__label">
+										<input class="tasks__checkbox" type="checkbox">
+										<span>Update ticket report</span>
+									</label>
+									<span class="tasks__tag">default</span>
+								</ul>
+							</ul>
+						</div>
+					</secion>
+				</div>
+			</section>
+
 		</div>
 	</main>
 

@@ -4,6 +4,7 @@
     align-items: center;
     padding: 18px 32px;
     background-color: transparent;
+    transition: .3s all ease;
     &:hover {
       background: rgba(221, 226, 255, .08);
     }

@@ -1,9 +1,8 @@
 .content {
   &__inner {
-    position: absolute;
-    left: 283px;
+    margin-left: 285px;
     flex-grow: 1;
-    width: 1185px;
+    width: 1152px;
     padding: 30px 35px 32px 0;
   }
   &__header {
@@ -23,5 +22,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
   }
 }
