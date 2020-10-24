@@ -1,9 +1,9 @@
 .content {
   &__inner {
-    margin-left: 285px;
-    flex-grow: 1;
-    width: 1152px;
-    padding: 30px 35px 32px 0;
+    margin-left: 255px;
+    max-width: 1185px;
+    width: 100%;
+    padding: 30px;
   }
   &__header {
     display: flex;
@@ -22,6 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__tickets-and-tasks {
     margin-bottom: 30px;
   }
 }

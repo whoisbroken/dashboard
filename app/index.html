@@ -13,63 +13,61 @@
 	<script defer src="js/scripts.min.js"></script>
 </head>
 
-<body>
-	<div class="container">
+<body id="body">
 
-
-		<aside class="sidebar">
-			<div class="sidebar__inner">
-				<div class="sidebar__header">
-					<img class="sidebar__header-logo" src="images/logo.svg" alt="logo">
-					<h3 class="sidebar__header-title">Dashboard</h3>
-				</div>
-				<nav class="sidebar__nav-main nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<i class="nav__icon fas fa-chart-pie"></i>
-							<a class="nav__link" href="#">
-								Overview
-							</a>
-						</li>
-						<li class="nav__item">
-							<i class="nav__icon fas fa-ticket-alt"></i>
-							<a class="nav__link" href="#">
-								Tickets
-							</a>
-						</li>
-						<li class="nav__item">
-							<i class="nav__icon fas fa-users"></i>
-							<a class="nav__link" href="#">
-								Contacts
-							</a>
-						</li>
-						<li class="nav__item">
-							<i class="nav__icon fas fa-user-tie"></i>
-							<a class="nav__link" href="#">
-								Tasks
-							</a>
-						</li>
-						<li class="nav__item">
-							<i class="nav__icon fas fa-book"></i>
-							<a class="nav__link" href="#">
-								Articles
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<nav class="sidebar__nav-footer nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<i class="nav__icon fas fa-cog"></i>
-							<a class="nav__link" href="#">
-								Settings
-							</a>
-						</li>
-					</ul>
-				</nav>
+	<aside class="sidebar">
+		<div class="sidebar__inner">
+			<div class="sidebar__header">
+				<img class="sidebar__header-logo" src="images/logo.svg" alt="logo">
+				<h3 class="sidebar__header-title">Dashboard</h3>
 			</div>
-		</aside>
-	</div>
+			<nav class="sidebar__nav-main nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<i class="nav__icon fas fa-chart-pie"></i>
+						<a class="nav__link" href="#">
+							Overview
+						</a>
+					</li>
+					<li class="nav__item">
+						<i class="nav__icon fas fa-ticket-alt"></i>
+						<a class="nav__link" href="#">
+							Tickets
+						</a>
+					</li>
+					<li class="nav__item">
+						<i class="nav__icon fas fa-users"></i>
+						<a class="nav__link" href="#">
+							Contacts
+						</a>
+					</li>
+					<li class="nav__item">
+						<i class="nav__icon fas fa-user-tie"></i>
+						<a class="nav__link" href="#">
+							Tasks
+						</a>
+					</li>
+					<li class="nav__item">
+						<i class="nav__icon fas fa-book"></i>
+						<a class="nav__link" href="#">
+							Articles
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="sidebar__nav-footer nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<i class="nav__icon fas fa-cog"></i>
+						<a class="nav__link" href="#">
+							Settings
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
 	<main class="content">
 		<div class="content__inner">
 			<div class="content__header">
@@ -108,7 +106,7 @@
 				</div>
 			</section>
 
-			<section class="tickets-and-tasks">
+			<section class="content__tickets-and-tasks tickets-and-tasks">
 				<div class="tickets-and-tasks__inner">
 					<section class="tickets-and-tasks__item unresolved-tickets">
 						<div class="unresolved-tickets__inner">
@@ -160,25 +158,252 @@
 										<input class="tasks__checkbox" type="checkbox">
 										<span>Finish ticket update</span>
 									</label>
-									<span class="tasks__tag">urgent</span>
+									<span class="tasks__chip chip chip--urgent">urgent</span>
 								</ul>
 								<ul class="tasks__item">
 									<label class="tasks__label">
 										<input class="tasks__checkbox" type="checkbox">
 										<span>Create new ticket example</span>
 									</label>
-									<span class="tasks__tag">new</span>
+									<span class="tasks__chip chip chip--new">new</span>
 								</ul>
 								<ul class="tasks__item">
 									<label class="tasks__label">
 										<input class="tasks__checkbox" type="checkbox">
 										<span>Update ticket report</span>
 									</label>
-									<span class="tasks__tag">default</span>
+									<span class="tasks__chip chip chip--default">default</span>
 								</ul>
 							</ul>
 						</div>
 					</secion>
+				</div>
+			</section>
+
+			<section class="content__all-tickets all-tickets">
+				<div class="all-tickets__inner">
+					<div class="all-tickets__header">
+						<h2 class="all-tickets__title title">All tickets</h2>
+						<div class="all-tickets__settings">
+							<button class="all-tickets__btn">
+								<img class="all-tickets__icon" src="images/sort.svg" alt="sort">
+								<span>Sort</span>
+							</button>
+							<button class="all-tickets__btn">
+								<img class="all-tickets__icon" src="images/filter.svg" alt="filter">
+								<span>Filter</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="all-tickets__caption">
+						<h3 class="all-tickets__caption-text all-tickets__caption-tickets-details">Ticket details</h3>
+						<h3 class="all-tickets__caption-text all-tickets__caption-customer-name">Customer name</h3>
+						<h3 class="all-tickets__caption-text all-tickets__caption-date">Date</h3>
+						<h3 class="all-tickets__caption-text all-tickets__caption-priority">Priority</h3>
+					</div>
+					<ul class="all-tickets__list">
+						<li class="all-tickets__item ticket">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-1.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Contact Email not Linked</p>
+										<span class="ticket__last-updated">Updated 1 day ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Tom Cruise</p>
+									<span class="ticket__customer-date">on 24.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 26, 2019</p>
+									<span class="ticket__date-time">6:30 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--high">High</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-2.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Adding Images to Featured Posts</p>
+										<span class="ticket__last-updated">Updated 1 day ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Matt Damon</p>
+									<span class="ticket__customer-date">on 24.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 26, 2019</p>
+									<span class="ticket__date-time">8:00 AM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--low">low</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-3.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">When will I be charged this month?</p>
+										<span class="ticket__last-updated">Updated 1 day ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Robert Downey</p>
+									<span class="ticket__customer-date">on 24.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 26, 2019</p>
+									<span class="ticket__date-time">7:30 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--high">High</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-4.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Payment not going through</p>
+										<span class="ticket__last-updated">Updated 2 days ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Christian Bale</p>
+									<span class="ticket__customer-date">on 24.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 25, 2019</p>
+									<span class="ticket__date-time">5:00 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--normal">Normal</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-5.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Unable to add replies</p>
+										<span class="ticket__last-updated">Updated 2 days ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Henry Cavil</p>
+									<span class="ticket__customer-date">on 24.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 25, 2019</p>
+									<span class="ticket__date-time">4:00 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--high">High</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-6.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Downtime since last week</p>
+										<span class="ticket__last-updated">Updated 3 days ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Chris Evans</p>
+									<span class="ticket__customer-date">on 23.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 25, 2019</p>
+									<span class="ticket__date-time">2:00 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--normal">Normal</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-7.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">Referral Bonus</p>
+										<span class="ticket__last-updated">Updated 4 day ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Sam Smith</p>
+									<span class="ticket__customer-date">on 22.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 25, 2019</p>
+									<span class="ticket__date-time">11:30 AM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--low">low</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+						<li class="all-tickets__item">
+							<div class="ticket__inner">
+								<div class="ticket__details">
+									<img class="ticket__avatar" src="images/avatars/avatar-8.png" alt="avatar">
+									<div class="ticket__details-info">
+										<p class="ticket__message">How do I change my password?</p>
+										<span class="ticket__last-updated">Updated 6 days ago</span>
+									</div>
+								</div>
+								<div class="ticket__customer">
+									<p class="ticket__customer-name">Steve Rogers</p>
+									<span class="ticket__customer-date">on 21.05.2019</span>
+								</div>
+								<div class="ticket__date">
+									<p class="ticket__date-label">May 24, 2019</p>
+									<span class="ticket__date-time">1:00 PM</span>
+								</div>
+								<div class="ticket__priority">
+									<span class="ticket__priority-tag tag tag--normal">Normal</span>
+								</div>
+								<img class="ticket__more" src="images/more.svg" alt="more">
+							</div>
+						</li>
+					</ul>
+					<div class="all-tickets__footer">
+						<label class="all-tickets__rows-per-page">
+							Rows per page:
+							<select class="all-tickets__amount" name="amount-rows">
+								<option value="8">8</option>
+								<option value="16">16</option>
+								<option value="32">32</option>
+								<option value="48">48</option>
+							</select>
+						</label>
+						<div class="all-tickets__pagination">
+							<p class="all-tickets__total-rows">1-8 of 1240</p>
+							<img class="all-tickets__arrow" src="images/arrow-left.svg" alt="left">
+							<img class="all-tickets__arrow" src="images/arrow-right.svg" alt="right">
+						</div>
+					</div>
 				</div>
 			</section>
 

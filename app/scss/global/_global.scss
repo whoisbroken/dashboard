@@ -1,4 +1,9 @@
 // $Mulish-Normal: font-family: 'Mulish', sans-serif;
+$red : #F12B2C;
+$yellow: #FEC400;
+$green: #29CC97;
+$gray: #9FA2B4;
+
 
 *,
 *::after,
@@ -16,7 +21,67 @@ body {
   background: #F7F8FC;
 }
 
-.container {
-  display: flex;
-  position: relative;
+.title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #252733;
 }
+
+.chip {
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  &--urgent {
+    background: $yellow;
+  }
+  &--new {
+    background: $green;
+  }
+  &--default {
+    background: #F0F1F7;
+    color: $gray;
+  }
+}
+
+.tag {
+  font-family: "Mulish";
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  &--high {
+    background: $red;
+  }
+  &--normal {
+    background: $green;
+  }
+  &--low {
+    background: $yellow;
+  }
+}
+
+
+
+
+
