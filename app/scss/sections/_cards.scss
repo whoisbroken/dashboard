@@ -1,8 +1,6 @@
 .cards-item {
-  border: 1px solid #DFE0EB;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 24px 32px;
+  @include section-border;
+  @include primary-padding;
   min-width: 258px;
   transition: .3s all ease;
   &:hover{
@@ -14,14 +12,9 @@
     color: #3751FF;
   }
   &__title {
-    font-family: "Mulish", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+    @include section-title;
+    color: $gray;
     text-align: center;
-    letter-spacing: 0.4px;
-    color: #9FA2B4;
     margin-bottom: 12px;
   }
   &__count {

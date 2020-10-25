@@ -1,8 +1,6 @@
 .unresolved-tickets {
   &__inner {
-    border: 1px solid #DFE0EB;
-    background: #FFFFFF;
-    border-radius: 8px;
+    @include section-border;
     padding: 32px 0 8px 0;
     min-width: 546px;
   }
@@ -15,13 +13,7 @@
   }
 
   &__title {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
-    letter-spacing: 0.4px;
-    color: #252733;
+    @include section-title;
     margin-bottom: 8px;
   }
 
@@ -46,13 +38,7 @@
   }
 
   &__view {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: right;
-    letter-spacing: 0.2px;
+    @include primary-text;
     color: #3751FF;
   }
   &__item {
@@ -67,23 +53,11 @@
     }
   }
   &__text {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    color: #252733;
+    @include primary-text;
   }
 
   &__value {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: right;
-    letter-spacing: 0.2px;
+    @include primary-text;
     color: #9FA2B4;
   }
 }

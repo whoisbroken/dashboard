@@ -12,11 +12,7 @@
     margin-bottom: 54px;
   }
   &__header-title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.3px; 
-    color: #252733;
+    @include content-title;
   }
   &__cards-inner {
     display: flex;

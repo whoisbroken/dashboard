@@ -2,7 +2,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding: 24px 32px;
+    @include primary-padding;
     border-bottom: 1px solid #DFE0EB;
   }
 
@@ -25,24 +25,12 @@
   }
 
   &__message {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    color: #252733;
+    @include primary-text;
     margin-bottom: 4px;
   }
 
   &__last-updated {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1px;
-    color: #C5C7CD;
+    @include ticket-subtitle-text;
   }
 
   &__customer {
@@ -52,24 +40,12 @@
     flex-direction: column;
 
     &-name {
-      font-family: "Mulish";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.2px;
-      color: #252733;
+      @include primary-text;
       margin-bottom: 4px;
     }
 
     &-date {
-      font-family: "Mulish";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.1px;
-      color: #C5C7CD;
+      @include ticket-subtitle-text;
     }
   }
 
@@ -80,24 +56,12 @@
     max-width: 180px;
 
     &-label {
-      font-family: "Mulish";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.2px;
-      color: #252733;
+      @include primary-text;
       margin-bottom: 4px;
     }
 
     &-time {
-      font-family: "Mulish";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.1px;
-      color: #C5C7CD;
+      @include ticket-subtitle-text;
     }
   }
 

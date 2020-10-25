@@ -1,15 +1,19 @@
-// $Mulish-Normal: font-family: 'Mulish', sans-serif;
+//vars
+$Mulish: 'Mulish',
+sans-serif;
 $red : #F12B2C;
 $yellow: #FEC400;
 $green: #29CC97;
+$blue: #3751FF;
 $gray: #9FA2B4;
-
+$grayscale: #252733;
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
 
 body {
   font-family: 'Mulish', sans-serif;
@@ -21,6 +25,78 @@ body {
   background: #F7F8FC;
 }
 
+// mixins
+@mixin primary-sidebar-text {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #A4A6B3;
+}
+
+@mixin primary-text {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $grayscale;
+}
+
+@mixin content-title {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  color: $grayscale;
+}
+
+@mixin section-title {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: $grayscale;
+}
+
+@mixin ticket-subtitle-text {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #C5C7CD;
+}
+
+@mixin tag-text {
+  font-family: $Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@mixin section-border {
+  border: 1px solid #DFE0EB;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+@mixin primary-padding {
+  padding: 24px 32px;
+}
+
 .title {
   font-family: "Mulish";
   font-style: normal;
@@ -28,30 +104,22 @@ body {
   font-size: 19px;
   line-height: 24px;
   letter-spacing: 0.4px;
-  color: #252733;
+  color: $grayscale;
 }
 
 .chip {
+  @include tag-text;
   border-radius: 8px;
   padding: 5px 12px;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 14px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #FFFFFF;
 
   &--urgent {
     background: $yellow;
   }
+
   &--new {
     background: $green;
   }
+
   &--default {
     background: #F0F1F7;
     color: $gray;
@@ -59,29 +127,19 @@ body {
 }
 
 .tag {
-  font-family: "Mulish";
+  @include tag-text;
   border-radius: 100px;
   padding: 5px 12px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #FFFFFF;
 
   &--high {
     background: $red;
   }
+
   &--normal {
     background: $green;
   }
+
   &--low {
     background: $yellow;
   }
 }
-
-
-
-
-

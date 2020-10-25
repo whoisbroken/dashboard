@@ -9,10 +9,13 @@
     border-right: 1px solid #DFE0EB;
   }
   &__icon {
-    padding-right: 24px;
+    margin-right: 24px;
     position: relative;
-    &::after {
-      content: '';
+
+    &:last-child {
+      margin-right: 32px;
+    }
+    &--notification {
       width: 6px;
       height: 6px;
       background: #3751FF;
@@ -21,22 +24,15 @@
       top: 0;
       border: 1.5px solid #F7F8FC;
     }
-    &:last-child {
-      padding-right: 32px;
-    }
   }
   &__info {
     display: flex;
     align-items: center;
   }
   &__name {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: right;
-    letter-spacing: 0.2px;
-    line-height: 20px;
+    @include primary-text;
     margin-left: 32px;
+    text-align: right;
   }
   &__avatar {
     width: 40px;
