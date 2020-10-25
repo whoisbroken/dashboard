@@ -10,19 +10,9 @@
   }
   &__icon {
     margin-right: 24px;
-    position: relative;
 
     &:last-child {
       margin-right: 32px;
-    }
-    &--notification {
-      width: 6px;
-      height: 6px;
-      background: #3751FF;
-      position: absolute;
-      left: 0;
-      top: 0;
-      border: 1.5px solid #F7F8FC;
     }
   }
   &__info {

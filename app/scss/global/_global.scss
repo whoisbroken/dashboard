@@ -16,12 +16,7 @@ $grayscale: #252733;
 
 
 body {
-  font-family: 'Mulish', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 32px;
-  letter-spacing: 0.2px;
+  @include primary-text;
   background: #F7F8FC;
 }
 
