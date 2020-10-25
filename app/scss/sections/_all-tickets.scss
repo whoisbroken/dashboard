@@ -55,11 +55,14 @@
       color: #4B506D;
     }
   }
+
   &__caption {
     display: flex;
     align-items: center;
     padding: 0 32px 12px;
-    border-bottom: 1.5px solid #DFE0EB;;
+    border-bottom: 1.5px solid #DFE0EB;
+    ;
+
     &-text {
       font-family: "Mulish";
       font-style: normal;
@@ -69,18 +72,86 @@
       letter-spacing: 0.2px;
       color: #9FA2B4;
     }
+
     &-tickets-details {
       width: 480px;
     }
+
     &-customer-name {
       width: 248px;
     }
+
     &-date {
       width: 180px;
     }
+
     &-priority {
       width: 104px;
       padding-right: 55px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px 32px;
+  }
+
+  &__rows-per-page {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #9FA2B4;
+    margin-right: 48px;
+
+  }
+
+  &__amount {
+    position: relative;
+    border: none;
+    
+
+    & option {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: right;
+      letter-spacing: 0.3px;
+      color: #4B506D;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+  }
+
+  &__total-rows {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.3px;
+    color: #9FA2B4;
+    margin-right: 24px;
+  }
+  &__footer-btn {
+    display: flex;
+    margin-left: 12px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 0;
     }
   }
 }
